@@ -1,16 +1,14 @@
 package pet.group.shareall.user.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-
-import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
-public class postDto {
+public class UserUpdateDto {
     private String name;
+    @Email
     private String email;
-    private String phone;
-    private LocalDate birthday;
 }

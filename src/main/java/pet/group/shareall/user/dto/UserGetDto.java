@@ -1,16 +1,14 @@
 package pet.group.shareall.user.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.time.LocalDate;
 
-@Setter
+@Data
 @AllArgsConstructor
-public class getDto {
+public class UserGetDto {
     private Long id;
     private String name;
     private String email;
-    private String phone;
-    private LocalDate birthday;
 }
