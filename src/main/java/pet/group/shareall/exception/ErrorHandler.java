@@ -18,4 +18,9 @@ public class ErrorHandler {
     public ResponseEntity<?> handleEmailAlreadyExists(EmailAlreadyExistsException e) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("error", e.getMessage()));
     }
+
+    @ExceptionHandler(NotFreeItem.class)
+    public ResponseEntity<?> handleNotFreeItem(NotFreeItem e) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("error", e.getMessage()));
+    }
 }

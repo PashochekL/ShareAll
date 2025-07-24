@@ -13,6 +13,6 @@ public class ItemPostDto {
     private String name;
     @NotBlank
     private String description;
-    @NotNull
+    @NotBlank
     private String available;
 }
